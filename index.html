@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Leaderboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <h1>Weekly Leaderboard</h1>
-  <table id="leaderboard">
+
+  <!-- Loading spinner -->
+  <div id="loader"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti"></canvas>
+
+  <table id="leaderboard" style="display: none;">
     <thead>
       <tr>
         <th>Rank</th>
@@ -14,10 +23,10 @@
         <th>Wagered ($)</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- JavaScript will add rows here -->
-    </tbody>
+    <tbody></tbody>
   </table>
+
   <script src="script.js"></script>
 </body>
 </html>
+
