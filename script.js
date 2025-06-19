@@ -1,27 +1,34 @@
 const users = [
-  { username: "RapidVibe488", wagered: 250 },
-  { username: "LIGHT57", wagered: 500 },
-  { username: "gebuii", wagered: 150 }
+  { username: "Marshmello", wagered: 500 },
+  { username: "Nigga Casino", wagered: 250 },
+  { username: "Innocent", wagered: 150 },
+  { username: "Shaan", wagered: 75 },
+  { username: "Chut lae lo", wagered: 25 },
+  { username: "nigga TopG", wagered: 0 },
+  { username: "", wagered: 0 },
+  { username: "", wagered: 0 },
+  { username: "", wagered: 0 },
+  { username: "", wagered: 0 }
 ];
 
 function renderLeaderboard() {
   const container = document.getElementById("leaderboard");
   container.innerHTML = "";
 
-  users.sort((a, b) => b.wagered - a.wagered);
+  users.forEach((user, index) => {
+    const row = document.createElement("div");
+    row.className = "row";
 
-  users.forEach((user, i) => {
-    const card = document.createElement("div");
-    card.className = "card";
-    if (i === 0) card.classList.add("highlight");
+    const avatar = user.username
+      ? `<img src="https://rainbet.com/logo.png" alt="Logo">`
+      : `<img src="https://rainbet.com/logo.png" alt="Logo">`;
 
-    card.innerHTML = `
-      <img src="https://rainbet.com/logo.png" alt="Avatar" class="avatar"/>
-      <h3>${user.username}</h3>
-      <p class="label">Wagered:</p>
-      <p class="value">$${user.wagered}</p>
+    row.innerHTML = `
+      <div class="rank">#${index + 1}</div>
+      <div class="name">${avatar} ${user.username || "—"}</div>
+      <div class="amount">$${user.wagered}</div>
     `;
-    container.appendChild(card);
+    container.appendChild(row);
   });
 }
 
