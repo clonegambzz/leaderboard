@@ -82,9 +82,9 @@ h1 {
   height: 200px;
   padding: 20px;
   border-radius: 20px;
-  background-color: #fff8dc;
+  background-color: #022c36;
   transition: transform 0.4s, box-shadow 0.4s;
-  animation: floatCard 3s ease-in-out infinite;
+  animation: floatCard 3s ease-in-out infinite, glowNeon 4s ease-in-out infinite;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,17 +108,17 @@ h1 {
 .card.rank-1 {
   order: 2;
   border: 3px solid gold;
-  box-shadow: 0 0 25px gold;
+  box-shadow: 0 0 15px gold, 0 0 30px gold, 0 0 50px gold;
 }
 .card.rank-2 {
   order: 1;
   border: 3px solid silver;
-  box-shadow: 0 0 25px silver;
+  box-shadow: 0 0 15px silver, 0 0 30px silver, 0 0 50px silver;
 }
 .card.rank-3 {
   order: 3;
   border: 3px solid #cd7f32;
-  box-shadow: 0 0 25px #cd7f32;
+  box-shadow: 0 0 15px #cd7f32, 0 0 30px #cd7f32, 0 0 50px #cd7f32;
 }
 .card:hover {
   transform: translateY(-15px) scale(1.05);
@@ -167,8 +167,8 @@ h1 {
   background: transparent;
   color: #ff4c4c;
   font-weight: bold;
-  text-shadow: 0 0 15px #ff4c4c;
-  font-size: 2em;
+  text-shadow: 0 0 20px #ff4c4c, 0 0 30px #ff4c4c;
+  font-size: 2.5em;
 }
 
 /* Animations */
@@ -178,11 +178,20 @@ h1 {
 }
 
 @keyframes floatCard {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 @keyframes slideFade {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowNeon {
+  0%, 100% {
+    box-shadow: 0 0 15px currentColor, 0 0 30px currentColor, 0 0 50px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 30px currentColor, 0 0 60px currentColor, 0 0 80px currentColor;
+  }
 }
