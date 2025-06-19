@@ -80,11 +80,16 @@ h1 {
   background: #161832;
   border: 2px solid #ffd700;
   border-radius: 20px;
-  width: 320px;
+  width: 250px;
+  height: 250px;
   padding: 30px;
   box-shadow: 0 0 60px #ffd700cc;
   transition: transform 0.4s, box-shadow 0.4s;
   animation: floatCard 3s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card:hover {
   transform: translateY(-15px) scale(1.02);
@@ -99,10 +104,11 @@ h1 {
 }
 .card h3 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .card p {
   margin: 5px 0;
+  font-size: 1.2em;
 }
 
 /* Rank 4-10 */
@@ -144,12 +150,12 @@ h1 {
 
 /* Footer */
 .footer {
-  padding: 20px;
+  padding: 30px;
   background: transparent;
   color: #ffd700;
   font-weight: bold;
-  text-shadow: 0 0 8px #ffd700;
-  font-size: 1.1em;
+  text-shadow: 0 0 12px #ffd700;
+  font-size: 1.5em;
 }
 
 /* Animations */
