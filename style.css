@@ -1,117 +1,149 @@
+/* Background + Fonts */
 body {
-  background: #0a0a23;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
-  text-align: center;
   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://ik.imagekit.io/marshmello/BETY.png?updatedAt=1750344255967') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
-.header {
-  padding: 30px;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 11, 30, 0.85);
+  z-index: -1;
 }
-.logo {
+
+/* Logo */
+.site-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+.site-logo img {
   width: 60px;
-  margin-bottom: 10px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffd700, 0 0 25px #ffd700;
+  transition: transform 0.3s;
+}
+.site-logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #fff, 0 0 30px #ffd700;
+}
+
+/* Header */
+header {
+  padding: 80px 20px 30px;
+  background: transparent;
 }
 h1 {
-  font-size: 2em;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
-.neon {
-  color: #ffdd57;
-  text-shadow: 0 0 8px #ffdd57, 0 0 20px #ffdd57;
-}
-
-.btn-group {
-  margin: 20px 0;
-  display: inline-flex;
-  gap: 15px;
+.highlight {
+  color: #ffd700;
+  text-shadow: 0 0 15px #ffd700;
 }
 .btn {
-  padding: 12px 24px;
-  background: #ffdd57;
-  color: #000;
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #ffd700;
+  color: black;
+  border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 221, 87, 0.7);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 20px #ffd700;
+  transition: transform 0.3s ease;
 }
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 221, 87, 1);
+  box-shadow: 0 0 25px #ffd700;
 }
 
-/* Leaderboard rows */
-.rows-container {
+/* Top 3 */
+.top-3 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #161832;
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 0 0 50px #ffd700cc;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 70px #ffd700;
+}
+.card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 15px #ffd700;
+}
+.card h3 {
+  margin: 0;
+  font-size: 1.1em;
+}
+.card p {
+  margin: 5px 0;
+}
+
+/* Rank 4-10 */
+.rankings {
+  margin: 50px auto;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 30px 10px;
-  gap: 20px;
+  gap: 15px;
 }
-
-.row {
-  width: 90%;
-  max-width: 800px;
-  background: #11152a;
-  border: 1px solid #ffdd57;
-  border-radius: 12px;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1em;
-  box-shadow: 0 0 15px rgba(255, 221, 87, 0.3);
-}
-
 .rank {
-  font-weight: bold;
-  color: #ffdd57;
-}
-.name {
+  background: #161832;
+  border: 2px solid #ffd700;
+  padding: 12px 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-.name img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid #ffdd57;
-  box-shadow: 0 0 5px rgba(255, 221, 87, 0.5);
-}
-.amount {
+  justify-content: space-between;
   font-weight: bold;
-  color: #ffdd57;
+  box-shadow: 0 0 10px #ffd700aa;
+  transition: transform 0.3s;
 }
-
-/* Top 3 glowing */
-.row.top1 {
-  box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700;
+.rank:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ffd700;
 }
-.row.top2 {
-  box-shadow: 0 0 20px #c0c0c0, 0 0 40px #c0c0c0;
+.rank span {
+  display: flex;
+  align-items: center;
 }
-.row.top3 {
-  box-shadow: 0 0 20px #cd7f32, 0 0 40px #cd7f32;
+.rank-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 0 5px #fff, 0 0 10px gold;
 }
 
 /* Footer */
-footer {
-  background: #11102a;
+.footer {
   padding: 20px;
-}
-.countdown-timer {
-  font-size: 1.5em;
-  color: #ffdd57;
-  text-shadow: 0 0 8px #ffdd57;
-}
-
-/* Responsive */
-@media screen and (max-width: 600px) {
-  .row {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
+  background: transparent;
+  color: #ffd700;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ffd700;
 }
