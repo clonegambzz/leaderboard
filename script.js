@@ -1,4 +1,3 @@
-// Dummy data
 const users = [
   { username: "ProGamer", wagered: 800 },
   { username: "PlayerOne", wagered: 500 },
@@ -28,23 +27,17 @@ function updateLeaderboard() {
     tableBody.appendChild(row);
   });
 
-  // Hide loader and show leaderboard
   document.getElementById("loader").style.display = "none";
   document.getElementById("leaderboard").style.display = "table";
 
-  // 🎉 Show confetti if 1st place exists
-  if (users.length > 0) {
-    launchConfetti();
-  }
+  launchConfetti();
 }
 
-// Show spinner, then load leaderboard
 setTimeout(updateLeaderboard, 2000);
 setInterval(updateLeaderboard, 10000);
 
-// 🎉 Confetti using canvas-confetti library
 function launchConfetti() {
-  const duration = 2 * 1000;
+  const duration = 2000;
   const animationEnd = Date.now() + duration;
   const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 2000 };
 
@@ -52,12 +45,9 @@ function launchConfetti() {
     return Math.random() * (max - min) + min;
   }
 
-  const interval = setInterval(function () {
+  const interval = setInterval(() => {
     const timeLeft = animationEnd - Date.now();
-
-    if (timeLeft <= 0) {
-      return clearInterval(interval);
-    }
+    if (timeLeft <= 0) return clearInterval(interval);
 
     const particleCount = 50 * (timeLeft / duration);
     confetti(Object.assign({}, defaults, {
@@ -71,11 +61,11 @@ function launchConfetti() {
   }, 250);
 }
 
-// Load the confetti script dynamically
 (function loadConfettiScript() {
   const script = document.createElement("script");
   script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js";
   document.body.appendChild(script);
 })();
+
 
 
