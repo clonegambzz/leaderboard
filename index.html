@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leaderboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Weekly Leaderboard</h1>
 
+  <!-- Loader Spinner -->
   <div id="loader"></div>
+
+  <!-- Confetti Canvas -->
   <canvas id="confetti"></canvas>
 
+  <!-- Leaderboard Table -->
   <table id="leaderboard" style="display: none;">
     <thead>
       <tr>
@@ -22,19 +27,20 @@
     <tbody></tbody>
   </table>
 
+  <!-- Social Icons -->
   <div class="social-icons">
-    <a href="https://discord.com/yourserver" target="_blank">
+    <a href="https://discord.com/yourserver" target="_blank" title="Join Discord">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" />
     </a>
-    <a href="https://kick.com/yourchannel" target="_blank">
+    <a href="https://kick.com/yourchannel" target="_blank" title="Watch on Kick">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kickstarter.svg" alt="Kick" />
     </a>
-    <a href="https://instagram.com/yourpage" target="_blank">
+    <a href="https://instagram.com/yourpage" target="_blank" title="Instagram">
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
     </a>
   </div>
 
-  <!-- 3D Gift Box with Join Now -->
+  <!-- 3D Gift Box Join Now Button -->
   <div class="gift-3d-container">
     <a href="https://yourreferrallink.com" target="_blank" class="gift-3d-link">
       <div class="gift-3d">
@@ -45,6 +51,7 @@
     </a>
   </div>
 
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
