@@ -7,32 +7,32 @@ const users = [
   {
     username: "Nigga Casino",
     wagered: 250,
-    avatar: "https://ibb.co/ndRBVhn"
+    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
   },
   {
     username: "Innocent",
     wagered: 150,
-    avatar: "https://ibb.co/ndRBVhn"
+    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
   },
   {
     username: "hee",
     wagered: 75,
-    avatar: "https://ibb.co/ndRBVhn"
+    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
   },
   {
     username: "u",
     wagered: 25,
-    avatar: "https://ibb.co/ndRBVhn"
+    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
   },
   {
     username: "v",
     wagered: 0,
-    avatar: "https://ibb.co/ndRBVhn"
+    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
   },
-  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" },
-  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" },
-  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" },
-  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" }
+  { username: "", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" },
+  { username: "", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" },
+  { username: "", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" },
+  { username: "", wagered: 0, avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" }
 ];
 
 function renderLeaderboard() {
