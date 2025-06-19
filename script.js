@@ -1,9 +1,9 @@
 const users = [
-  { username: "ProGamer", wagered: 800 },
-  { username: "PlayerOne", wagered: 500 },
-  { username: "Zebra99", wagered: 450 },
-  { username: "LuckyStar", wagered: 300 },
-  { username: "Speedy", wagered: 250 }
+  { username: "Marshmello", wagered: 800 },
+  { username: "NiggaClone", wagered: 500 },
+  { username: "Inocent", wagered: 450 },
+  { username: "Shaan", wagered: 300 },
+  { username: "Pussy", wagered: 250 }
 ];
 
 function updateLeaderboard() {
