@@ -4,7 +4,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: url('https://ik.imagekit.io/marshmello/BETY.png?updatedAt=1750344255967') no-repeat center center fixed;
   background-size: cover;
-  color: white;
+  color: #ffff66;
   text-align: center;
   position: relative;
 }
@@ -83,6 +83,7 @@ h1 {
   padding: 20px;
   border-radius: 20px;
   background-color: #022c36;
+  color: #ffff66;
   transition: transform 0.4s, box-shadow 0.4s;
   animation: floatCard 3s ease-in-out infinite, glowNeon 4s ease-in-out infinite;
   display: flex;
@@ -100,10 +101,12 @@ h1 {
 .card h3 {
   margin: 0;
   font-size: 1.4em;
+  color: #ffff66;
 }
 .card p {
   margin: 5px 0;
   font-size: 1.2em;
+  color: #ffff66;
 }
 .card.rank-1 {
   order: 2;
@@ -144,6 +147,7 @@ h1 {
   box-shadow: 0 0 20px #ffd700aa;
   transition: transform 0.3s, box-shadow 0.3s;
   animation: slideFade 0.6s ease forwards;
+  color: #ffff66;
 }
 .rank:hover {
   transform: translateY(-6px);
