@@ -72,6 +72,7 @@ h1 {
 .top-3 {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   gap: 40px;
   margin-top: 40px;
   flex-wrap: wrap;
@@ -110,6 +111,8 @@ h1 {
 }
 .card.rank-1 {
   order: 2;
+  width: 6.5cm;
+  height: 6.5cm;
   border: 3px solid gold;
   box-shadow: 0 0 15px gold, 0 0 30px gold, 0 0 50px gold;
 }
