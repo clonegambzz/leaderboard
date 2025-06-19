@@ -60,7 +60,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
   font-size: 1.1em;
   box-shadow: 0 0 15px rgba(255, 221, 87, 0.3);
 }
@@ -77,10 +76,24 @@ h1 {
 .name img {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ffdd57;
+  box-shadow: 0 0 5px rgba(255, 221, 87, 0.5);
 }
 .amount {
   font-weight: bold;
   color: #ffdd57;
+}
+
+/* Top 3 glowing */
+.row.top1 {
+  box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700;
+}
+.row.top2 {
+  box-shadow: 0 0 20px #c0c0c0, 0 0 40px #c0c0c0;
+}
+.row.top3 {
+  box-shadow: 0 0 20px #cd7f32, 0 0 40px #cd7f32;
 }
 
 /* Footer */
