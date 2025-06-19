@@ -8,13 +8,18 @@ const users = [
 
 function updateLeaderboard() {
   const tableBody = document.querySelector("#leaderboard tbody");
-  tableBody.innerHTML = "";
+  tableBody.innerHTML = ""; // Clear old rows
 
-  users.sort((a, b) => b.wagered - a.wagered);
+  users.sort((a, b) => b.wagered - a.wagered); // Sort by highest
 
   users.forEach((user, index) => {
+    let medal = "";
+    if (index === 0) medal = "🥇";
+    else if (index === 1) medal = "🥈";
+    else if (index === 2) medal = "🥉";
+
     const row = `<tr>
-      <td>${index + 1}</td>
+      <td>${index + 1} ${medal}</td>
       <td>${user.username}</td>
       <td>$${user.wagered}</td>
     </tr>`;
@@ -22,4 +27,9 @@ function updateLeaderboard() {
   });
 }
 
+// Run once at start
 updateLeaderboard();
+
+// Run again every 10 seconds (10,000 milliseconds)
+setInterval(updateLeaderboard, 10000);
+
