@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WILDBETS Weekly Leaderboard</title>
+  <title>Leaderboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <img src="https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111" alt="Logo" class="logo" />
-    <h1><span class="neon">$1000</span> WILDBETS WEEKLY LEADERBOARD!</h1>
-    <p>Every <strong>BET</strong> on Bet20.com under Code Rexer counts<br>towards your score. <em>Updates every Day.</em></p>
-    <div class="btn-group">
-      <a href=" https://bet20ref.com/jd77f989e" class="btn">▶ PLAY NOW</a>
-      <a href="@" class="btn">➜BONUS DROP</a>
-      <a href="https://discord.gg/HbVkYq6AJC" class="btn">JOIN DISCORD</a>
+  <!-- Site Logo -->
+  <div class="site-logo">
+    <a href="#">
+      <img src="logo.png" alt="Site Logo" />
+    </a>
+  </div>
+
+  <header>
+    <h1><span class="highlight">$1000</span> CODE MAMA WEEKLY LEADERBOARD!</h1>
+    <p>Every <strong>BET</strong> on Rainbet.com under Code <strong>MAMA</strong> counts towards your score.<br>
+    The leaderboard updates every day.</p>
+    <div class="buttons">
+      <a href="#" class="btn">▶ PLAY NOW</a>
+      <a href="#" class="btn">➜ BONUS DROPS</a>
+      <a href="#" class="btn">JOIN OUR DISCORD</a>
     </div>
   </header>
 
   <main>
-    <div class="rows-container" id="leaderboard"></div>
+    <section class="top-3" id="top-three"></section>
+    <section class="rankings" id="rankings"></section>
   </main>
 
-  <footer>
-    <div class="countdown-label">LEADERBOARD RELOAD IN</div>
-    <div class="countdown-timer">20 DAYS</div>
+  <footer class="footer">
+    <p id="countdown">LEADERBOARD ENDS IN <span id="days-left">...</span></p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
