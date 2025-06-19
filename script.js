@@ -36,6 +36,7 @@ function updateLeaderboard() {
 setTimeout(updateLeaderboard, 2000);
 setInterval(updateLeaderboard, 10000);
 
+// Confetti for 1st place
 function launchConfetti() {
   const duration = 2000;
   const animationEnd = Date.now() + duration;
@@ -61,11 +62,9 @@ function launchConfetti() {
   }, 250);
 }
 
+// Load confetti lib
 (function loadConfettiScript() {
   const script = document.createElement("script");
   script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js";
   document.body.appendChild(script);
 })();
-
-
-
