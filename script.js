@@ -2,7 +2,7 @@ const users = [
   {
     username: "Marshmello",
     wagered: 500,
-    avatar: "https://ibb.co/ndRBVhn"
+    avatar: "https://ik.imagekit.io/marshmello/bet%2020%20(1).png?updatedAt=1750327077111"
   },
   {
     username: "Nigga Casino",
