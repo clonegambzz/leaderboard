@@ -3,52 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leaderboard</title>
+  <title>XJQ Weekly Leaderboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Weekly Leaderboard</h1>
+  <header class="header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1><span class="neon">$1000</span> CODE XJQ WEEKLY LEADERBOARD!</h1>
+    <p>Every <strong>BET</strong> on Rainbet.com under Code XJQ counts<br>towards your score. <em>Updates every 15 min.</em></p>
+    <div class="btn-group">
+      <a href="#" class="btn">▶ PLAY NOW</a>
+      <a href="#" class="btn">➜ BONUS DROPS</a>
+    </div>
+  </header>
 
-  <!-- Loader Spinner -->
-  <div id="loader"></div>
+  <main>
+    <div class="cards" id="leaderboard"></div>
+  </main>
 
-  <!-- Confetti Canvas -->
-  <canvas id="confetti"></canvas>
+  <footer>
+    <div class="countdown-label">LEADERBOARD END IN</div>
+    <div class="countdown-timer" id="timer">7 DAYS</div>
+  </footer>
 
-  <!-- Leaderboard Table -->
-  <table id="leaderboard" style="display: none;">
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Username</th>
-        <th>Wagered ($)</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-
-  <!-- Social Icons -->
-  <div class="social-icons">
-    <a href="discord.gg/rexer" target="_blank" title="Join Discord">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" />
-    </a>
-    <a href="https://kick.com/wildbets" target="_blank" title="Watch on Kick">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kickstarter.svg" alt="Kick" />
-    </a>
-    <a href="https://instagram.com" target="_blank" title="Instagram">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
-    </a>
-  </div>
-
-  <!-- New Gift Box Join Now Button -->
-  <div class="gift-container">
-    <a href="https://bet20ref.com/jd77f989e" target="_blank" class="gift-link">
-      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Gift Box" class="gift-image" />
-      <span class="gift-join-text">JOIN NOW</span>
-    </a>
-  </div>
-
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
