@@ -75,25 +75,20 @@ h1 {
   gap: 40px;
   margin-top: 40px;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .card {
-  background: #161832;
-  border: 2px solid #ffd700;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
   border-radius: 20px;
-  width: 250px;
-  height: 250px;
-  padding: 30px;
-  box-shadow: 0 0 60px #ffd700cc;
+  background-color: #fff8dc;
   transition: transform 0.4s, box-shadow 0.4s;
   animation: floatCard 3s ease-in-out infinite;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.card:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 0 80px #ffd700;
 }
 .card img {
   width: 70px;
@@ -109,6 +104,24 @@ h1 {
 .card p {
   margin: 5px 0;
   font-size: 1.2em;
+}
+.card.rank-1 {
+  order: 2;
+  border: 3px solid gold;
+  box-shadow: 0 0 25px gold;
+}
+.card.rank-2 {
+  order: 1;
+  border: 3px solid silver;
+  box-shadow: 0 0 25px silver;
+}
+.card.rank-3 {
+  order: 3;
+  border: 3px solid #cd7f32;
+  box-shadow: 0 0 25px #cd7f32;
+}
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
 }
 
 /* Rank 4-10 */
@@ -152,10 +165,10 @@ h1 {
 .footer {
   padding: 30px;
   background: transparent;
-  color: #ffd700;
+  color: #ff4c4c;
   font-weight: bold;
-  text-shadow: 0 0 12px #ffd700;
-  font-size: 1.5em;
+  text-shadow: 0 0 15px #ff4c4c;
+  font-size: 2em;
 }
 
 /* Animations */
