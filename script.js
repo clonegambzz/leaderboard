@@ -1,14 +1,38 @@
 const users = [
-  { username: "Marshmello", wagered: 500 },
-  { username: "Nigga Casino", wagered: 250 },
-  { username: "Innocent", wagered: 150 },
-  { username: "Shaan", wagered: 75 },
-  { username: "Chut lae lo", wagered: 25 },
-  { username: "nigga TopG", wagered: 0 },
-  { username: "", wagered: 0 },
-  { username: "", wagered: 0 },
-  { username: "", wagered: 0 },
-  { username: "", wagered: 0 }
+  {
+    username: "Marshmello",
+    wagered: 500,
+    avatar: "https://ibb.co/ndRBVhn"
+  },
+  {
+    username: "Nigga Casino",
+    wagered: 250,
+    avatar: "https://ibb.co/ndRBVhn"
+  },
+  {
+    username: "Innocent",
+    wagered: 150,
+    avatar: "https://ibb.co/ndRBVhn"
+  },
+  {
+    username: "hee",
+    wagered: 75,
+    avatar: "https://ibb.co/ndRBVhn"
+  },
+  {
+    username: "u",
+    wagered: 25,
+    avatar: "https://ibb.co/ndRBVhn"
+  },
+  {
+    username: "v",
+    wagered: 0,
+    avatar: "https://ibb.co/ndRBVhn"
+  },
+  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" },
+  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" },
+  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" },
+  { username: "", wagered: 0, avatar: "https://ibb.co/ndRBVhn" }
 ];
 
 function renderLeaderboard() {
@@ -19,9 +43,11 @@ function renderLeaderboard() {
     const row = document.createElement("div");
     row.className = "row";
 
-    const avatar = user.username
-      ? `<img src="https://rainbet.com/logo.png" alt="Logo">`
-      : `<img src="https://rainbet.com/logo.png" alt="Logo">`;
+    if (index === 0) row.classList.add("top1");
+    if (index === 1) row.classList.add("top2");
+    if (index === 2) row.classList.add("top3");
+
+    const avatar = `<img src="${user.avatar}" alt="Logo">`;
 
     row.innerHTML = `
       <div class="rank">#${index + 1}</div>
